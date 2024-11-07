@@ -1,57 +1,115 @@
-# GenerixOcr Crew
+# GenerixOCR - Automated Document Processing AI
 
-Welcome to the GenerixOcr Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+GenerixOCR is an intelligent document processing system powered by [crewAI](https://crewai.com) that automates the extraction and classification of text from business documents. Our AI-powered crew handles the complete document processing pipeline, from initial scanning to structured data output.
+
+## What It Does
+
+Our automated document processing AI specializes in:
+- Automated text extraction from document images
+- Intelligent document type classification
+- Data structuring and validation
+- Processing of various business documents including:
+  - Invoices (Factures)
+  - Delivery Notes (Bons de livraison)
+  - Reception Notes (Bons de reception)
+  - Purchase Orders
+  - And other business documents
+
+## Key Features
+
+- **Automated Document Processing**: Full automation of document handling workflow
+- **Intelligent OCR**: High-accuracy text extraction using advanced AI models
+- **Smart Classification**: Automatic identification of document types and content
+- **Multi-Language Support**: Process documents in multiple languages
+- **Structured Output**: Convert unstructured document data into structured formats
+- **Quality Assurance**: Built-in validation checks for extracted data
+- **Scalable Architecture**: Process multiple documents simultaneously
 
 ## Installation
 
-Ensure you have Python >=3.10 <=3.13 installed on your system. This project uses [Poetry](https://python-poetry.org/) for dependency management and package handling, offering a seamless setup and execution experience.
+### Prerequisites
 
-First, if you haven't already, install Poetry:
+- Python >=3.10 <=3.13
+- [Poetry](https://python-poetry.org/) for dependency management
 
+### Setup
+
+1. Install Poetry if you haven't already:
 ```bash
 pip install poetry
 ```
 
-Next, navigate to your project directory and install the dependencies:
-
-1. First lock the dependencies and then install them:
-
+2. Clone and install:
 ```bash
-crewai install
+git clone https://github.com/yourusername/generix_ocr.git
+cd generix_ocr
+poetry install
 ```
 
-### Customizing
+3. Environment setup:
+   - Copy `.env.example` to `.env`
+   - Add your OpenAI API key to `.env`
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+## Usage
 
-- Modify `src/generix_ocr/config/agents.yaml` to define your agents
-- Modify `src/generix_ocr/config/tasks.yaml` to define your tasks
-- Modify `src/generix_ocr/crew.py` to add your own logic, tools and specific args
-- Modify `src/generix_ocr/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+Start the automated processing:
 
 ```bash
-crewai run
+poetry run crewai run
 ```
 
-This command initializes the generix_ocr Crew, assembling the agents and assigning them tasks as defined in your configuration.
+### Supported Input Formats
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+The AI crew can process:
+- PNG images
+- JPEG images
+- PDF documents
+- TIFF files
+- Scanned documents
 
-## Understanding Your Crew
+### Output Formats
 
-The generix_ocr Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+The system generates:
+- Structured text extraction
+- Document classification results
+- Validated data in processable format
+- Optional: JSON/CSV exports
+
+## System Architecture
+
+```
+generix_ocr/
+├── src/
+│   └── generix_ocr/
+│       ├── crews/
+│       │   ├── ocr_crew/         # Document processing agents
+│       │   └── write_x_crew/     # Data formatting agents
+│       ├── pipelines/            # Processing workflows
+│       └── tools/                # Specialized processing tools
+└── config/                       # AI crew configurations
+```
+
+## Configuration
+
+Customize your AI crew:
+- `src/generix_ocr/crews/ocr_crew/config/agents.yaml` - Agent roles and capabilities
+- `src/generix_ocr/crews/ocr_crew/config/tasks.yaml` - Processing workflow definitions
+
+## Contributing
+
+We welcome contributions to improve the automated document processing capabilities!
+
+## License
+
+[Your chosen license]
 
 ## Support
 
-For support, questions, or feedback regarding the GenerixOcr Crew or crewAI.
+Get help:
+- GitHub Issues
+- [crewAI documentation](https://docs.crewai.com)
+- [crewAI Discord](https://discord.com/invite/X4JWnZnxPb)
 
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+## Acknowledgments
 
-Let's create wonders together with the power and simplicity of crewAI.
+Built with [crewAI](https://crewai.com) - Empowering AI agent orchestration for automated document processing.
