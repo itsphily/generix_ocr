@@ -1,11 +1,24 @@
 text_extraction_task:
   agent: image_text_extractor
   description: >
-    Extract text from the provided image file.
-    images: {image_path}.
-    Ensure that the extracted text is accurate and complete. If you are not able to extract the text, return an empty string.
+    Extract the following fields: 
+    - Invoice Number 
+    - Invoice Date 
+    - Seller Information (Name, Address, Contact Details) 
+    - Buyer Information (Name, Address, Contact Details) 
+    - Line Items (for each item): 
+      - Description 
+      - Quantity 
+      - Unit Price 
+      - Total Price 
+      - Subtotal 
+      - Tax Amount 
+      - Total Amount 
+      - Payment Terms 
+      - Due Date 
+    Present the extracted data in a structured JSON format.If you are not able to extract the text, return an empty string.
   expected_output: >
-    A string containing the full text extracted from the image.
+    JSON formatted string containing the extracted data.
 
 document_classification_task:
   agent: document_classifier
@@ -19,3 +32,17 @@ document_classification_task:
     Look for key indicators and patterns in the text that identify the document type.
   expected_output: >
     A string containing the document classification category.
+
+ocr_output_comparison:
+  agent: ocr_output_comparator
+  description: >
+    Compare and analyze the text extraction output with {llama_ocr_output} and {minicpm_ocr_output} to ensure accuracy and completeness. 
+    Your task is to make sure these results contain the same information, however since they are extracted by different models, there might be some discrepancies in formatting.
+    Specific information such as price, item names, addresses, quantities, etc. should be exactly the same.
+  expected_output: >
+    If the results are identical, return "Identical". 
+    If there are discrepancies in formatting, return "formating". 
+    If there are discrepancies in the content for instance a name is slightly misspelled, return "minor content".
+    If there are several discrepancies, return "major discrepancies". 
+    If there are any discrepancies, in the amounts returned, return "major discrepancies".
+    only return the result, no need to explain.

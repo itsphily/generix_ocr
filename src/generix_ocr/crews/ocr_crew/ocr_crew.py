@@ -13,6 +13,11 @@ class OCRClassification(BaseModel):
 	content: str
 
 
+class OCRevaluation(BaseModel):
+	"""Evaluation of the OCR result"""
+	evaluation: str
+
+
 @CrewBase
 class OCRCrew():
 	"""OCR Crew"""
@@ -20,10 +25,12 @@ class OCRCrew():
 	tasks_config = 'config/tasks.yaml'
 
 	# Class-level attributes
+	# THIS IS NOT WORKING NEED TO FIX
 	ollama_vision = LLM(
 		model='ollama/llama3.2-vision',
 		base_url='http://localhost:11434'
 	)
+
 	vision_tool = VisionTool()  # Moved to class level
 
 	def __init__(self):
@@ -44,13 +51,20 @@ class OCRCrew():
 		return Agent(
 			config=self.agents_config['image_text_extractor'],
 			verbose=True,
-			tools=[self.vision_tool]  # Now this will work
+			tools=[self.vision_tool]  
 		)
 
 	@agent
 	def document_classifier(self) -> Agent:
 		return Agent(
 			config=self.agents_config['document_classifier'],
+			verbose=True
+		)
+	
+	@agent
+	def ocr_output_comparator(self) -> Agent:
+		return Agent(
+			config=self.agents_config['ocr_output_comparator'],
 			verbose=True
 		)
 
@@ -60,6 +74,13 @@ class OCRCrew():
 			config=self.tasks_config['text_extraction_task'],
 		)
 
+	@task
+	def ocr_output_comparison(self) -> Task:
+		return Task(
+			config=self.tasks_config['ocr_output_comparison'],
+			output_pydantic=OCRevaluation
+		)
+	
 	@task
 	def document_classification_task(self) -> Task:
 		return Task(

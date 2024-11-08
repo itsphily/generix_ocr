@@ -15,9 +15,7 @@ class GenerixOcrPipeline:
         )
     
     async def kickoff(self, inputs):
-        print('got here')
         pipeline = self.create_pipeline()
         print(inputs)
-        print('test')
         results = await pipeline.kickoff(inputs)
         return results
