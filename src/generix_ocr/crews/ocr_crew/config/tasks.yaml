@@ -1,8 +1,21 @@
 text_extraction_task:
   agent: image_text_extractor
   description: >
-    Extract text from the provided image file. Ensure that the extracted text is accurate and complete,
-    and ready for any further analysis or processing tasks. The image file provided may contain
-    various text elements, so it's crucial to capture all readable text.
+    Extract text from the provided image file.
+    images: {image_path}.
+    Ensure that the extracted text is accurate and complete. If you are not able to extract the text, return an empty string.
   expected_output: >
     A string containing the full text extracted from the image.
+
+document_classification_task:
+  agent: document_classifier
+  description: >
+    Classify the document based on the extracted text into one of these categories:
+    - Invoice 
+    - Delivery Note 
+    - Reception Note 
+    - Purchase Order
+    - Unknown
+    Look for key indicators and patterns in the text that identify the document type.
+  expected_output: >
+    A string containing the document classification category.

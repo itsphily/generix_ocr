@@ -1,13 +1,11 @@
 # Common imports for both examples
 from crewai import Pipeline
-
-from ..crews.ocr_crew.ocr_crew import OcrCrew
-from ..crews.write_x_crew.write_x_crew import WriteXCrew
+from generix_ocr.crews.ocr_crew.ocr_crew import OCRCrew
 
 class GenerixOcrPipeline:
     def __init__(self):
         # Initialize crews
-        self.ocr_crew = OcrCrew().crew()
+        self.ocr_crew = OCRCrew().crew()
     
     def create_pipeline(self):
         return Pipeline(
@@ -17,6 +15,9 @@ class GenerixOcrPipeline:
         )
     
     async def kickoff(self, inputs):
+        print('got here')
         pipeline = self.create_pipeline()
+        print(inputs)
+        print('test')
         results = await pipeline.kickoff(inputs)
         return results

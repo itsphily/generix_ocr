@@ -1,58 +1,78 @@
 from pydantic import BaseModel
-from crewai import Agent, Crew, Process, Task
+from crewai import Agent, Crew, Process, Task, LLM
 from crewai.project import CrewBase, agent, crew, task
-
-# Uncomment the following line to use an example of a custom tool
-# from demo_pipeline.tools.custom_tool import MyCustomTool
-
-# Check our tools documentations for more information on how to use them
-# from crewai_tools import SerperDevTool
+from crewai_tools import VisionTool
+import os
+from dotenv import load_dotenv
+import ollama
 
 
-class ResearchReport(BaseModel):
-	"""Research Report"""
-	title: str
-	body: str
+class OCRClassification(BaseModel):
+	"""Classification of the OCR result"""
+	document_type: str
+	content: str
+
 
 @CrewBase
-class ResearchCrew():
-	"""Research Crew"""
+class OCRCrew():
+	"""OCR Crew"""
 	agents_config = 'config/agents.yaml'
 	tasks_config = 'config/tasks.yaml'
 
+	# Class-level attributes
+	ollama_vision = LLM(
+		model='ollama/llama3.2-vision',
+		base_url='http://localhost:11434'
+	)
+	vision_tool = VisionTool()  # Moved to class level
+
+	def __init__(self):
+		# Load environment variables
+		load_dotenv()
+		
+		# Verify API key is loaded
+		if not os.getenv("OPENAI_API_KEY"):
+			raise ValueError("OPENAI_API_KEY not found in environment variables")
+		
+		os.environ["OPENAI_MODEL_NAME"] = "gpt-4o"
+
 	@agent
-	def researcher(self) -> Agent:
+	def image_text_extractor(self) -> Agent:
+		'''
+		Agent that extracts text from an image
+		'''
 		return Agent(
-			config=self.agents_config['researcher'],
-			verbose=True
+			config=self.agents_config['image_text_extractor'],
+			verbose=True,
+			tools=[self.vision_tool]  # Now this will work
 		)
 
 	@agent
-	def reporting_analyst(self) -> Agent:
+	def document_classifier(self) -> Agent:
 		return Agent(
-			config=self.agents_config['reporting_analyst'],
+			config=self.agents_config['document_classifier'],
 			verbose=True
 		)
 
 	@task
-	def research_task(self) -> Task:
+	def text_extraction_task(self) -> Task:
 		return Task(
-			config=self.tasks_config['research_task'],
+			config=self.tasks_config['text_extraction_task'],
 		)
 
 	@task
-	def reporting_task(self) -> Task:
+	def document_classification_task(self) -> Task:
 		return Task(
-			config=self.tasks_config['reporting_task'],
-			output_pydantic=ResearchReport
+			config=self.tasks_config['document_classification_task'],
+			output_pydantic=OCRClassification
 		)
 
 	@crew
 	def crew(self) -> Crew:
-		"""Creates the Research Crew"""
+		"""Creates the OCR Classification Crew"""
 		return Crew(
-			agents=self.agents, # Automatically created by the @agent decorator
-			tasks=self.tasks, # Automatically created by the @task decorator
+			agents=self.agents,
+			tasks=self.tasks,
 			process=Process.sequential,
 			verbose=True,
 		)

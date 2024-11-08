@@ -8,6 +8,7 @@ authors = ["Your Name <you@example.com>"]
 python = ">=3.10,<=3.13"
 crewai = { extras = ["tools"], version = ">=0.76.9,<1.0.0" }
 asyncio = "*"
+ollama = "^0.3.3"
 
 [tool.poetry.scripts]
 generix_ocr = "generix_ocr.main:main"
