@@ -1,103 +1,108 @@
 # GenerixOCR - Automated Document Processing AI
 
-GenerixOCR is an intelligent document processing system powered by [crewAI](https://crewai.com) that automates the extraction and classification of text from business documents. Our AI-powered crew handles the complete document processing pipeline, from initial scanning to structured data output.
-
-## What It Does
-
-Our automated document processing AI specializes in:
-- Automated text extraction from document images
-- Intelligent document type classification
-- Data structuring and validation
-- Processing of various business documents including:
-  - Invoices (Factures)
-  - Delivery Notes (Bons de livraison)
-  - Reception Notes (Bons de reception)
-  - Purchase Orders
-  - And other business documents
+GenerixOCR is an intelligent document processing system that leverages multiple vision models to extract text from images. The system uses a combination of open-source and proprietary models to ensure robust text extraction:
+- Llama 3.2 Vision (open source)
+- MiniCPM Vision (open source)
+- GPT-4 Vision (via OpenAI API)
 
 ## Key Features
 
-- **Automated Document Processing**: Full automation of document handling workflow
-- **Intelligent OCR**: High-accuracy text extraction using advanced AI models
-- **Smart Classification**: Automatic identification of document types and content
-- **Multi-Language Support**: Process documents in multiple languages
-- **Structured Output**: Convert unstructured document data into structured formats
-- **Quality Assurance**: Built-in validation checks for extracted data
-- **Scalable Architecture**: Process multiple documents simultaneously
+- **Multi-Model Processing**: Uses three different vision models for comprehensive text extraction
+- **Local and Cloud Processing**: Combines local (Ollama-based) and cloud (OpenAI) processing
+- **Custom Vision Tool**: Implements a custom CrewAI tool for OpenAI vision processing
+- **Automated Pipeline**: Processes images through all models sequentially
+- **Structured Output**: Saves results from each model in organized output files
+
+## Prerequisites
+
+- Python >=3.10 <=3.13
+- [Ollama](https://ollama.ai/) for local vision models
+- OpenAI API key for GPT-4 Vision
+- [Poetry](https://python-poetry.org/) for dependency management
 
 ## Installation
 
-### Prerequisites
-
-- Python >=3.10 <=3.13
-- [Poetry](https://python-poetry.org/) for dependency management
-
-### Setup
-
-1. Install Poetry if you haven't already:
+1. Install Ollama:
 ```bash
-pip install poetry
+# For macOS
+curl -fsSL https://ollama.ai/install.sh | sh
 ```
 
-2. Clone and install:
+2. Install required vision models:
+```bash
+# Install Llama 3.2 Vision
+ollama pull llama3.2-vision
+
+# Install MiniCPM Vision
+ollama pull minicpm-v
+```
+
+3. Clone and install the project:
 ```bash
 git clone https://github.com/yourusername/generix_ocr.git
 cd generix_ocr
 poetry install
 ```
 
-3. Environment setup:
+4. Environment setup:
    - Copy `.env.example` to `.env`
-   - Add your OpenAI API key to `.env`
+   - Add your OpenAI API key to `.env`:
+     ```
+     OPENAI_API_KEY=your_key_here
+     ```
 
-## Usage
-
-Start the automated processing:
-
-```bash
-poetry run crewai run
-```
-
-### Supported Input Formats
-
-The AI crew can process:
-- PNG images
-- JPEG images
-- PDF documents
-- TIFF files
-- Scanned documents
-
-### Output Formats
-
-The system generates:
-- Structured text extraction
-- Document classification results
-- Validated data in processable format
-- Optional: JSON/CSV exports
-
-## System Architecture
+## Project Structure
 
 ```
 generix_ocr/
 ├── src/
 │   └── generix_ocr/
 │       ├── crews/
-│       │   ├── ocr_crew/         # Document processing agents
-│       │   └── write_x_crew/     # Data formatting agents
-│       ├── pipelines/            # Processing workflows
-│       └── tools/                # Specialized processing tools
-└── config/                       # AI crew configurations
+│       │   └── ocr_crew/         # OCR processing crew
+│       ├── tools/
+│       │   └── custom_tool.py    # Custom Vision Tool for OpenAI
+│       ├── pipelines/            # Processing pipeline
+│       └── main.py              # Main execution script
+└── Documents_for_processing/     # Input directory for images
 ```
 
-## Configuration
+## Custom Vision Tool
 
-Customize your AI crew:
-- `src/generix_ocr/crews/ocr_crew/config/agents.yaml` - Agent roles and capabilities
-- `src/generix_ocr/crews/ocr_crew/config/tasks.yaml` - Processing workflow definitions
+The project implements a custom CrewAI tool for OpenAI Vision processing:
 
-## Contributing
+```python
+class CustomVisionTool(BaseTool):
+    name: str = "Custom Vision Tool"
+    description: str = "A tool that processes images using OpenAI's GPT-4 Vision model"
 
-We welcome contributions to improve the automated document processing capabilities!
+    def _run(self, image_path: str) -> str:
+        # Processes image using OpenAI's GPT-4 Vision API
+        # Returns extracted text
+```
+
+## Usage
+
+1. Place your documents in the `Documents_for_processing` folder
+2. Run the OCR pipeline:
+```bash
+poetry run python -m generix_ocr.main
+```
+
+## Output
+
+The system generates three types of output:
+1. `outputs/vision_model_outputs.txt` - Results from Llama and MiniCPM models
+2. `OCRoutput.txt` - Results from the OCR crew tasks
+3. `openAI_output.txt` - Results from GPT-4 Vision processing
+
+## Current Status
+
+The project is currently under development with:
+- ✅ Multi-model text extraction
+- ✅ Custom Vision Tool implementation
+- ✅ Basic pipeline structure
+- 🚧 Advanced document processing (in progress)
+- 🚧 Result comparison and validation (in progress)
 
 ## License
 
@@ -105,11 +110,6 @@ We welcome contributions to improve the automated document processing capabiliti
 
 ## Support
 
-Get help:
+For support:
 - GitHub Issues
-- [crewAI documentation](https://docs.crewai.com)
-- [crewAI Discord](https://discord.com/invite/X4JWnZnxPb)
-
-## Acknowledgments
-
-Built with [crewAI](https://crewai.com) - Empowering AI agent orchestration for automated document processing.
+- [Documentation](link_to_your_docs)
