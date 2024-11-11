@@ -1,24 +1,9 @@
 text_extraction_task:
   agent: image_text_extractor
   description: >
-    Extract the following fields: 
-    - Invoice Number 
-    - Invoice Date 
-    - Seller Information (Name, Address, Contact Details) 
-    - Buyer Information (Name, Address, Contact Details) 
-    - Line Items (for each item): 
-      - Description 
-      - Quantity 
-      - Unit Price 
-      - Total Price 
-      - Subtotal 
-      - Tax Amount 
-      - Total Amount 
-      - Payment Terms 
-      - Due Date 
-    Present the extracted data in a structured JSON format.If you are not able to extract the text, return an empty string.
+    Extract all the text from the image and return only the text and nothing else."image_url": {image_path}. 
   expected_output: >
-    JSON formatted string containing the extracted data.
+    All the text extracted from the image.
 
 document_classification_task:
   agent: document_classifier

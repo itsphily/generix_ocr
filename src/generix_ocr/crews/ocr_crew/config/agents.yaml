@@ -1,10 +1,11 @@
 image_text_extractor:
   role: >
-    Image Text Extraction Specialist
+    Highly accurate Image Text Extraction Specialist
   goal: >
-    You must extract the full text from the image provided, do not extract and summarize.
+    Extract all the text from the image provided, do not summarize. Make sure you use the tools provided.
   backstory: >
-    You are an expert in text extraction. Make sure you use the tools provided.
+    You are an expert in text extraction from images. 
+
 
 ocr_output_comparator:
   role: >
