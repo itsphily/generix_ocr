@@ -1,0 +1,62 @@
+**Billing Statement from Amazon EU S.A.R.L., Succursale Française**
+
+**Reference Details:**
+- **Payment Reference:** FR19BJR463CM43S
+- **Payment Origin:** Payment made by Amazon EU S.A.R.L., Succursale Française
+- **TVA Number:** FR12487773327
+
+**Vendor Information:**
+- **Vendor:** Amazon EU S.A.R.L., Succursale Française
+- **VAT:** FR12487773327
+
+**Invoice Header:**
+- **Date of Invoice and Delivery:** December 18, 2022
+- **Invoice Number:** FR549MRP3QLCX
+- **Total Invoice Amount:** €459.98
+
+**Billing Information:**
+- **Billed To:**
+  - Company: AIRVAT EURL  
+  - Address: 10 Rue de Penthièvre, Paris, 75008, France
+
+**Customer Information:**
+- **Customer Name:** Pascal Descamps
+- **Customer Address:**
+  - Street: 15, Rue de Dijon
+  - Postal Code: 21121
+  - City: Daix
+  - Country: France
+
+**Product Details:**
+
+| **Product Name**                              | **Quantity** | **Price per Unit (€)** | **Total Price (€)** |
+|-----------------------------------------------|--------------|-------------------------|---------------------|
+| Samsung Galaxy Buds Pro Violet                | 2            | 191.66                  | 383.32              |
+| Samsung Galaxy Buds Pro White                 | 2            | 229.99                  | 459.98              |
+
+**Shipping Information:**
+- **Shipping Address:**
+  - Name: Pascal Descamps
+  - Street: 15, Rue de Dijon
+  - City: Daix
+  - Postal Code: 21121
+  - Country: France
+
+**Payment Method:**
+- **Payment Date:** December 18, 2022
+- **Payment Method:** Not specified
+
+**Additional Information:**
+- **Return Policy:** Not specified
+- **Warranty:** Not specified
+- **Contact Information for Amazon EU S.A.R.L.:** 67 Boulevard du General Leclerc, Daix 92110 France
+
+**Footer:**
+- For customer service, please visit: www.amazon.fr/contact-us
+- Page 1 of 1 
+
+**Notes:**
+- Equipment and electronic items comply with article L.541-10-2 of the Code environment.  
+- Grand Total: Facture Total : €459.98 
+
+This document consolidates the discrepancies observed across different OCR outputs while retaining essential and accurate details from each model output.

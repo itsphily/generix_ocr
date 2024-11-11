@@ -45,6 +45,15 @@ class OCRCrew():
             tools=[self.vision_tool],
             llm=llm
         )
+    
+    @agent
+    def ocr_output_aggregator(self) -> Agent:
+        llm = LLM(model="gpt-4o")
+        return Agent(
+            config=self.agents_config['ocr_output_aggregator'],
+            verbose=True,
+            llm=llm
+        )
 
     @agent
     def document_classifier(self) -> Agent:
@@ -55,40 +64,30 @@ class OCRCrew():
             llm=llm
         )
     
-    @agent
-    def ocr_output_comparator(self) -> Agent:
-        llm = LLM(model="gpt-4o")
-        return Agent(
-            config=self.agents_config['ocr_output_comparator'],
-            verbose=True,
-            llm=llm
-        )
-
     @task
     def text_extraction_task(self) -> Task:
-        # Create output directory if it doesn't exist
-        output_dir = Path.cwd() / 'outputs'
-        output_dir.mkdir(exist_ok=True)
         output_file = 'OCRoutput.txt'
-        
         return Task(
             config=self.tasks_config['text_extraction_task'],
-            output_file=str(output_file)  # Convert Path to string
+            output_file=output_file,
+            async_execution=True  # Make this task async
         )
 
     @task
-    def ocr_output_comparison(self) -> Task:
+    def ocr_output_aggregation(self) -> Task:
         return Task(
-            config=self.tasks_config['ocr_output_comparison'],
-            #output_pydantic=OCRevaluation,
-            output_file='openAI_output.txt'
+            config=self.tasks_config['ocr_output_aggregation'],
+            output_file='aggregated_output.txt',
+            async_execution=True  # Make this task async
         )
-    
+
     @task
     def document_classification_task(self) -> Task:
         return Task(
             config=self.tasks_config['document_classification_task'],
             output_pydantic=OCRClassification,
+            context=[self.text_extraction_task(), self.ocr_output_aggregation()],  # Pass task instances
+            async_execution=False  # This task waits for context
         )
 
     @crew

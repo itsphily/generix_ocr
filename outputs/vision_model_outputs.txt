@@ -1,0 +1,614 @@
+
+
+=== Llama Vision Model Output ===
+**Amazon France Facture (Invoice)**
+
+**Header Section:**
+
+* **amazon.fr logo**: A yellow arrow pointing to the right, accompanied by the word "amazon" in black text.
+* **Facture (Invoice) Header**: The French word for "facture," indicating that this document is an invoice.
+
+**Payé Section:**
+
+* **Réference de paiement**: Reference number for payment
+* **Vendu par Amazon EU S.A.r.l., Succursale Française**: Sold by Amazon EU S.A.R.L, French subsidiary
+* **TVA FR12487773327**: VAT number (FR12487773327)
+
+**Facture Section:**
+
+* **AIRVAT EURL**
+	+ Address: 10 Rue de Penthièvre, Paris, 75008
+	+ Contact information: Not provided
+* **Adresse de facturation**: Address for invoicing purposes
+* **Adresse de livraison**: Shipping address
+* **Vendu par**: Sold by Amazon EU S.A.R.L., Succursale Française
+
+**Informations de la commande Section:**
+
+* **Date de la commande**: Date of order
+* **Numéro de la commande**: Order number
+* **Prix Unitaire HT**: Price per unit (excluding taxes)
+* **Taux TVA**: VAT rate
+* **Prix Unitaire TTC**: Total price per unit (including taxes)
+
+**Détails de la facture Section:**
+
+* **Description**: Product description
+* **Qté**: Quantity ordered
+* **Prix Unitaire HT**: Price per unit (excluding taxes)
+* **Taux TVA**: VAT rate
+* **Prix Unitaire TTC**: Total price per unit (including taxes)
+
+**Facture Totale Section:**
+
+* **Facture totale**: Total invoice amount
+
+This document appears to be a French-language invoice from Amazon France, detailing the payment information, product details, and total cost.
+==================================================
+
+
+=== MiniCPM Vision Model Output ===
+**Header:**
+```
+amazon.fr
+Facture
+
+Référence de paiement : FR19BJR463CM4S
+Vendu par Amazon EU S.A. r.l., Succursale Française
+TVA FR12487773327
+Date du facture/Date de la livraison: 18 décembre 2022
+
+AIRVAT EURL
+10 RUE DE PENTHIÈVRE
+PARIS, 75008
+FR
+Numéro de la facture: FR549MRP3QLCX Total au payer : 459,98 €
+
+Mentionnez le Client en visitant leur lien suivant: www.amazon.fr/contact-us
+```
+
+**Body Text:**
+- **Information des facturation:** 
+    - Adressee de facturation:
+        ```
+        AIRVAT EURL
+        10 RUE DE PENTHIÈVRE
+        PARIS, 75008
+
+        FR
+        ```
+
+    - Adressee de livraison: 
+        ```
+        Pascal Descamps
+        15, Rue de Dijon
+        DAIX.21121
+        FR
+        ```
+
+- **Mentionnez le Client en visitant leur lien suivant:** www.amazon.fr/contact-us
+
+**Information on the Facture:**
+```
+Date de la commande : 18 décembre 2022
+Numéro de la commande : 132-18565901-6055176 Total au payer : 
+
+Détails de la facture:
+Description Samsung Galaxy Buds Pro Violet SM-R190NZVAEUE
+Qté HT: 2, Prix Unitaire HTC: 1.16 €, Taux TVA HTC: 20%, TTC Total HTC: 
+Prix Unitaire TTU: , TTC Total TTU:
+
+Total Facture Total : 
+
+Informations de la commande :
+Date de la commande : 18 décembre 2022
+Numéro de la commande :
+
+```
+
+**Footer:**
+- **TVA Frais:** 
+    ```
+    Samsung Galaxy Buds Pro Violet SM-R190NZVAEUE, ASIN: BO8VNLQ5PB.
+    Livraison:
+    Facture Total : 459.98 €
+
+    Total HT TVA : 383.26€
+    Total TTC : 
+
+    ```
+
+**Notes:**
+- "Les prix de ces équipements, et électroniques inclus en l’occurrence conformément à l'article L. 541-10-2 du code de l'environnement."
+- *LU-BIO-04*
+
+This image contains a detailed invoice with various sections including payment reference details, address of the seller and buyer, information on the product purchased, total amount due to be paid by the customer, date received in France and other legal notices.
+==================================================
+
+
+=== Llama Vision Model Output ===
+AIRVAT EURL
+10 RUE DE PENTHIÈVRE PARIS 75008 FR
+
+Veuillez contacter le Service Client en visitant le lien suivant: www.amazon.fr/contact-us
+
+Airvat EURL
+10 rue de Penthièvre Paris, 75008 FR
+
+Adresse de livraison:
+Pascal Descamps
+15 Rue de Dijon Daix, 21121 FR
+
+Vendu par:
+Amazon EU Sàrl., Succursale Française
+67 Boulevard du General Leclerc Clichy, 92110 France TVA FR12487773327
+
+Informations de la commande:
+Date de la commande: 18 décembre 2022
+Numéro de la commande: 132-1856509-6055157
+
+Détails de la facture:
+
+*   **Description:** Samsung Galaxy Buds Pro Violet SM-R190NZAUE/EUE (2)
+*   **Prix Unitaire HT:** 191,66 €
+*   **Taux TVA:** 20%
+*   **Prix Unitaire TTC:** 229,99 €
+*   **Facture totale:** 459,98 €
+
+**TVA:**
+
+*   **TVA:** 76,66 €
+
+**Total:**
+
+*   **Total:** 76,66 €
+==================================================
+
+
+=== MiniCPM Vision Model Output ===
+Title:
+amazon.fr
+
+Subtitle:
+Facture
+
+Section Headings and Content:
+
+1. **Référence de paiement**
+   - Référence par EUA: FR2065H734M/AS
+   - Vendu par Amazon EU S.A.r.l., Succursale Française, TVA 89X12487773327
+
+2. **Date de facture/Début du livraison**
+   - Date: 10 décembre 2022
+   - Numéro de la facture: FR564MRPQLCY Total à payer: 459,98 €
+
+3. **Informations de la commande**
+   - Date de la commande: 10 décembre 2022
+   - Numéro de la commande: 132-1856507-6055157
+
+**Details of the Purchase:**
+
+4. **Description**
+   - Samsung Galaxy Buds Pro White, Model SM-R190N/ZAUEUQ.
+     - ASIN#: BO8VNOQ5P
+     - Livraison date:
+
+5. **Total de la facture**
+   - Total HT: 362,27 € (including a percentage of tax and duties)
+     - Subtotal after taxes: TVA 40% = 196,71
+
+**Footer Information:**
+
+- This document is subject to Amazon EU s.a.r.l.'s customer service policy.
+- For further inquiries or issues regarding the invoice, please contact Customer Service at www.amazon.fr/contact-us.
+==================================================
+
+
+=== Llama Vision Model Output ===
+AIRVAT EURL
+10 RUE DE PENTHIÈVRE
+PARIS, 75008
+FR
+
+Adresse de facturation:
+Airvat EURL
+10 rue de Penthièvre
+Paris, 75008
+FR
+
+Adresse de livraison:
+Pascal Descamps
+15, Rue de Dijon
+Daix, 21121
+FR
+
+Vendu par: Amazon EU S.A R.L., Succursale Française
+67 Boulevard du General Leclerc
+Clichy, 92110
+France
+
+**Facture**
+
+* **Date de facturation:** 18 décembre 2022
+* **Numéro de la facture:** FR549MRP3QLCX
+* **Total à payer:** 459.98€
+
+**Détails de la commande:**
+
+* **Date de la commande:** 18 décembre 2022
+* **N° de la commande:** 132-1856509-6055157
+
+**Produits commandés:**
+
+* **Samsung Galaxy Buds Pro Violet SM-R190NZVAEUE**
+	+ Quantité: 2
+	+ Prix unitaire HT: 191.66€
+	+ Total TTC: 229.99€
+
+**Paiement:**
+
+* **Moyen de paiement:** Paiement en ligne
+* **Bénéficiaire:** Amazon EU S.A R.L.
+
+**Remarques:**
+
+* Le paiement a été effectué le 18 décembre 2022.
+* La facture a été émise le 18 décembre 2022.
+* Les produits ont été livrés le 20 décembre 2022.
+==================================================
+
+
+=== MiniCPM Vision Model Output ===
+**Title:**
+facture
+
+---
+
+**Header Section:**
+
+- **Logo:** amazon.fr (amazon logo)
+
+- **Company Information:**
+  - AIRVAT EURL  
+  - 10 RUE DE PENTHIÈVRE  
+  - PARIS, 75008  
+
+- **Invoice Details:**
+  - Référence de paiement: FR19BJR463CM4S
+  - Vendu par Amazon EU S.à r.l., Succursale Française  
+  - TVA FR12487773327
+
+---
+
+**Payment Section:**
+
+- **Paid by:** Airvat EURL  
+  - Address: 10 RUE DE PENTHIÈVRE, PARIS, 75008  
+
+- **Invoice Number:** FR549MRP3QLX  
+  - Total à payer: 459,98 €
+
+---
+
+**Delivery Information Section:**
+
+- **Address of Delivery and Pickup:**
+  - Adress de facturation
+    - Airvat EURL
+      - 10 RUE DE PENTHIÈVRE
+      - PARIS, 75008  
+  - Adress de livraison
+    - Pascal Descamps
+      - 15, Rue de Dijon
+      - DAIX, 21121
+
+- **Sold by:** Amazon EU S.à r.l., Succursale Française  
+  - Address: 67 Boulevard du General Léclicr, Clichy 92110 France  
+
+---
+
+**Product Information Section:**
+
+- **Description:** Samsung Galaxy Buds Pro Volcanic Color SM-R190NZVAEUE
+
+- **Details of the Facture**
+  - Quantité (Qté): 2  
+  - Prix Unitaire HT: €191,66
+    - TTC: €229,95  
+  - Total (HT): €459,98  
+
+---
+
+**Footer Section:**
+
+- **Description:** Samsung Galaxy Buds Pro Volcanic Color SM-R190NZVAEUE
+
+- **ASIN:** B08VNQSQ5P
+- **Taux TVA**: 20%
+
+- **Total HT:** €459,98  
+  - Total TTC: €649,98  
+
+---
+
+**Additional Information Section:**
+
+- **Facture Total:** 459,98 €
+
+---
+
+**Footer Note:**
+Les prix de ces équipements et électroports incluent l'éco-refabrication. conformément à l'article L. 541-10-2 du code de l'environnement.
+
+---
+
+**Page Information:**
+
+- Page 1 de 1
+==================================================
+
+
+=== Llama Vision Model Output ===
+AIRVAT EURL
+10 RUE DE PENTHIÈVRE
+PARIS, 75008 FR
+
+Veuillez contacter le Service Client en visitant le lien suivant: www.amazon.fr/contact-us
+
+Airvat EURL
+10 rue de Penthièvre
+Paris, 75008 FR
+
+Pascal Descamps
+15 Rue de Dijon
+Daix. 21121 FR
+
+Amazon EU S.a r.l., Succursale Française
+67 Boulevard du General Leclerc
+Clichy 92110 France TVA FR12487773327
+
+Samsung Galaxy Buds Pro Violet SM-R190NZVAEUE
+2
+191,66 €
+20%
+229,99 €
+459.98 €
+
+ASIN: B05VNGSQ5P
+Livraison:
+0,00 €
+0,00 €
+
+Facture Total:
+Taux TVA 20%:
+Total HT:
+383,32 €
+76,66 €
+76,66 €
+==================================================
+
+
+=== MiniCPM Vision Model Output ===
+**Title:**
+Facture
+
+**Logo:**
+amazon.fr
+
+**Recipient Information:**
+AIRVAT EURL  
+10 RUE DE PENTHIÈVRE  
+PARIS, 75008  
+FR
+
+**Seller Information:**
+Ventu par Amazon EU S.A. r.l., Succursale Française  
+TVA FR12487773327  
+
+**Date and Reference Number:**
+Date de facture/Date de la livraison : 18 décembre 2022  
+Numéro de la facture : FR549MRP3QLCX
+
+**Total Amount Paid by Buyer:**
+Total à payer : 459,98 €  
+
+**Contact Information for Client Service:**
+Veuillez contacter le Service Client en visitant leur lien suivant : www.amazon.fr/contact-us  
+Numéro du téléphone de contact : 132-1865069-605517
+
+**Facture par:**
+Airvat EURL  
+Pascal Descamps  
+10 RUE DE PENTHIÈVRE  
+Paris, 75008  
+
+**Seller Information Continued:**
+Ventu par Amazon EU S.A. r.l., Succursale Française  
+TVA FR1248777332
+
+**Information about the Product:**
+
+- **Description:** Samsung Galaxy Buds Pro Violet SM-R190NZVAEU
+  - ASIN : B08VNQ5Q5P  
+
+- **Details of the Facture**
+  - Quantité Unitaire HT (Unit Price):  
+    *2* unitaires at €191.66 each, totaling: ¥437.32
+
+- **Total Amount for Product:** Total TTC : €459.98  
+
+**Additional Information on Equipment and Electronics Sale:**
+Les produits de cette facture font partie des équipements et électriques éco-labellés conformément à l'article L. 541-10-2 du code de l'environnement.
+LU-BIO-04
+
+**Manufacturer's Details:**
+
+- **Manufacturer:**  
+Amazon EU S.A. r.l., Succursale Française  
+67 Boulevard du General Leclerc  
+Daix, 21121  
+
+**Delivery Information:**
+Livraison :
+
+**Total Price Paid by Buyer Including VAT:**
+Total à payer : €459.98
+
+**Footer Note:**  
+Prix des équipements et électriques éco-labellés incluent l'éco-Responsabilité, conformément à l'article L. 541-10-2 du code de l'environnement.
+
+**Page Information:**
+Page 1 de 1
+==================================================
+
+
+=== Llama Vision Model Output ===
+AIRVAT EURL
+10 RUE DE PENTHIÈVRE
+PARIS, 75008
+FR
+
+Reference of payment: FR19BJR463CM43S
+Payment made by Amazon EU S.A.R.L., Succursale Française
+TVA: FR12487773327
+
+Date of the invoice and date of delivery: December 18, 2022
+Number of invoices: 1
+Total amount paid: €459.98
+
+**Invoice Details**
+
+* **Order Number:** Not provided
+* **Customer Name:** Pascal Descamps
+* **Address:**
+	+ Street: 15, Rue de Dijon
+	+ Postal Code: 21121
+	+ City: Daix
+	+ Country: France
+* **Email Address:** Not provided
+* **Phone Number:** Not provided
+
+**Products**
+
+* **Product 1: Samsung Galaxy Buds Pro Violet**
+	+ Quantity: 2
+	+ Price per unit: €191.66
+	+ Total price: €383.32
+* **Product 2: Samsung Galaxy Buds Pro White**
+	+ Quantity: 2
+	+ Price per unit: €229.99
+	+ Total price: €459.98
+
+**Payment Method**
+
+* Payment method: Not specified
+* Payment date: December 18, 2022
+
+**Shipping Information**
+
+* Shipping address:
+	+ Street: Not provided
+	+ Postal Code: Not provided
+	+ City: Not provided
+	+ Country: Not provided
+* Shipping carrier: Not provided
+* Shipping tracking number: Not provided
+
+**Return Policy**
+
+* Return policy: Not specified
+
+**Warranty Information**
+
+* Warranty period: Not specified
+* Warranty contact information: Not provided
+==================================================
+
+
+=== MiniCPM Vision Model Output ===
+**Title:**
+facture
+
+**Header Information:**
+- **Amazon.fr Logo:** amazon.fr Facture
+- **Payment Reference:** Référence de paiement : FR19BJR463CM43S
+- **Seller Information:** Vendu par Amazon EU S.A. r.l., Succursale Française, TVA FR12487773327
+
+**Billing Address:**
+AIRVAT EURL  
+10 RUE DE PENTHIÈVRE  
+PARIS, 75008  
+
+**Shipping Information:**  
+Veuillez contacter le Service Client en visitant leur lien suivant : www.amazon.fr/contact-us.
+
+**Invoice Details:**
+
+- **Date of Invoice/Purchase Date:** date de la facture/date de la livraison  
+   12 décembre 2022
+
+- **Invoice Number:** numéro de la facture FR549MRP3QLCX  
+
+- **Total to Be Paid:** Total à payer : 459,98 €  
+
+**Facture Address:**
+- Adressée de facturation  
+   AIRVAT EURL  
+   10 RUE DE PENTHIÈVRE  
+   PARIS, 75008
+
+- **Shipping Address:** Adressée de livraison  
+   Pascal Descamps  
+   15, Rue de Dijon  
+   Daix. 21121  
+
+**Country Code and Country:**
+FR - FRANCE
+FR - FRANCE
+
+**Product Information:**
+
+- **Vendu par :** Amazon EU S.A r.l., Succursale Française  
+   TVA FR12487773327
+
+- **Model:** Samsung Galaxy Buds Pro Violet SM-R190NZVAUE
+- **SKU/ASIN:** ASIN: B08VQNQS5P  
+
+**Product Description and Details:**
+
+- **Description:**  
+   Samsung Galaxy Buds Pro Purple Edition, 3.6mm Driver Size.
+
+- **Quantity Ordered (HT):**
+   2
+
+- **Unit Price HT:**
+   191.64 €
+
+- **Total Unit Price HT:**
+   0.00 € 
+
+- **Discounted Amount:**  
+   TVA included in the price, conform with article L.541-10-2 of the Code environment.
+
+**Summary Table:**
+
+| Description                        | Qte | Prix Unitaire (HT) | Taux TVA (%) | TTC |
+|------------------------------------|-----|-------------------|--------------|-----|
+| Samsung Galaxy Buds Pro Purple Edition, 3.6mm Driver Size.                    |    |                  |              |     |
+| **Total:**                          | 2   |                   |               |     |
+
+**Grand Total:**
+- Facture Total : 459,98 €  
+
+**Additional Notes:**
+
+- **Notes on Equipment and Electronic Items (ECO-replacement):** Conformité à l'article L.541-10-2 of the Code environment.
+
+**Contact Information:**  
+- Amazon EU S.A r.l., Succursale Française
+67 Boulevard du General Leclerc, Daix 92110
+
+**Footer:**
+Page 1 de 1
+==================================================

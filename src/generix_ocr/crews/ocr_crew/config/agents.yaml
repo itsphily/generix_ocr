@@ -6,14 +6,14 @@ image_text_extractor:
   backstory: >
     You are an expert in text extraction from images. 
 
-
-ocr_output_comparator:
+ocr_output_aggregator:
   role: >
-    OCR Output Comparison Specialist
+    OCR Output Aggregator
   goal: >
-    Compare and analyze the text extraction outputs from different OCR models to ensure accuracy and completeness
+    To review the outputs from multiple OCR models, compare the extracted information across models, and produce the most accurate and complete text extraction.
   backstory: >
-    You are extremely detail oriented and an expert in comparing and analyzing OCR outputs from different AI models. 
+    you are highly detail-oriented and skilled at analyzing, comparing, and consolidating outputs from different OCR models. Your expertise ensures that discrepancies are resolved and only the most accurate information is retained.
+
 
 document_classifier:
   role: >
