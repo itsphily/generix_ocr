@@ -1,0 +1,5 @@
+data_extraction_task:
+  description: Extract data fields based on the document type.
+  expected_output: >
+    The extracted data fields in JSON format.
+  agent: data_extractor

@@ -1,4 +1,3 @@
-```
 amazon.fr
 
 Facture
@@ -8,15 +7,16 @@ AIRVAT EURL
 PARIS, 75008
 FR
 
-Veuillez contacter le Service Client en visitant le lien suivant: www.amazon.fr/contact-us
-
 Payé
 Référence de paiement FR19BJR463CM43S
 Vendu par Amazon EU S.a r.l., Succursale Française
 TVA FR12487773327
+
 Date de la facture/Date de la livraison 18 décembre 2022
-Numéro de la facture FR54MPR3QLCX
+Numéro de la facture FR549MRP3QLCX
 Total à payer 459,98 €
+
+Veuillez contacter le Service Client en visitant le lien suivant: www.amazon.fr/contact-us
 
 Adresse de facturation
 Airvat EURL
@@ -43,26 +43,46 @@ Numéro de la commande 132-1856509-6055157
 
 Détails de la facture
 
-Description Qté Prix Unitaire HT Taux TVA Prix Unitaire TTC Total TTC
+Description
+Samsung Galaxy Buds Pro Violet SM-R190NZVAEUE
 
-Samsung Galaxy Buds Pro Violet SM-R190NZVAEUE 2 191,66 € 20 % 229,99 € 459,98 €
+Quantité 
+2
+
+Prix Unitaire HT
+191,66 €
+
+Taux TVA
+20 %
+
+Prix Unitaire TTC 
+229,99 €
+
+Total TTC 
+459,98 €
 
 ASIN: B08VNQSQ5P
 Livraison 0,00 € 0,00 € 0,00 €
 
 Facture Total 459,98 €
 
-Taux TVA Total HT TVA
-20 % 383,32 € 76,66 €
+Taux TVA 
+20 %
 
-Total 76,66 €
+Total HT
+383,32 €
 
-Nos prix des équipements électriques et électroniques incluent l'éco-participation, conformément à l’article L. 541-10-2 du code de l’environnement.
-LU-B10-04
+TVA
+76,66 €
+
+Total
+76,66 €
+
+Nos prix des équipements électriques et électroniques incluent l'éco-participation, conformément à l'article L. 541-10-2 du code de l'environnement.
+LU-BIO-04
 Amazon EU S.à r.l. - 38 avenue John F. Kennedy, L-1855 Luxembourg
-R.C.S. Luxembourg: B 101818 - Capital Social: 37,500 EUR - N° de licence: 104408 - N° de TVA intracommunautaire: LU20260743
-Amazon EU S.à r.l., Succursale Française - 67 Boulevard du Général Leclerc, 92110 Clichy, France
-SIREN: 487773327 - RCS Nanterre - APE: 4791b - TVA: FR 12487773327
+R.C.S. Luxembourg B 101818 - Capital Social: 37.500 EUR - N° de licence: 104408 - N° de TVA intracommunautaire: LU20260743
+Amazon EU S.a r.l., Succursale Française - 67 Boulevard du Général Leclerc, 92110 Clichy, France
+SIREN: 487773327 - RCS Nanterre - APE: 4791B - TVA: FR 12487773327
 
 Page 1 de 1
-```

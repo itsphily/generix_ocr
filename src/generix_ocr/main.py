@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import asyncio
 from pathlib import Path
-from generix_ocr.pipelines.pipeline import GenerixOcrPipeline
+from generix_ocr.pipelines.pipeline import GenerixOcrPipeline, GenerixETLPipeline
 from PIL import Image
 import ollama
 
@@ -106,6 +106,11 @@ def minicpm_vision_model(image_path, prompt):
         return None
 
 async def run():
+
+    # Initialize variables
+    document_type = None
+    aggregated_output = None
+
     """Run the pipeline."""
     # Get document URLs
     image_urls = get_document_urls()
@@ -134,17 +139,23 @@ async def run():
 
     # Initialize pipeline
     pipeline = GenerixOcrPipeline()
-    results = await pipeline.kickoff([inputs])
+    results, document_type, aggregated_output = await pipeline.kickoff([inputs])
 
+    print(f"Document type: {document_type}")
+    print(f"Aggregated output: {aggregated_output}")
 
-    for result in results:
-        print(f"Raw output: {result.raw}")
-        if result.json_dict:
-            print(f"JSON output: {result.json_dict}")
-        if result.pydantic:
-            print(f"Pydantic output: {result.pydantic}")
-        print("\n")
+    if document_type == "Invoice":
+        fields = ["invoice_number", "invoice_date", "invoice_total"]
+    elif document_type == "Receipt":
+        fields = ["receipt_number", "receipt_date", "receipt_total"]
     
+    # Run ETL pipeline
+    inputs_2 = {
+        "fields": fields,
+        "aggregated_output": aggregated_output
+    }
+    pipeline_2 = GenerixETLPipeline()
+    results_2 = await pipeline_2.kickoff([inputs_2])
 
 def main():
     asyncio.run(run())
