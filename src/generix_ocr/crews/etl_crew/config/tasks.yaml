@@ -3,3 +3,9 @@ data_extraction_task:
   expected_output: >
     The extracted data fields in JSON format.
   agent: data_extractor
+
+transform_load_task:
+  description: Format and structure the extracted data and load it into Airtable
+  agent: transform_load_specialist
+  expected_output: Properly formatted and structured data ready for Airtable
+

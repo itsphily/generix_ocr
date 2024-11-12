@@ -1,15 +1,11 @@
 from typing import Type, Dict
 from crewai_tools import BaseTool
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 import base64
 from openai import OpenAI
 import os
-from generix_ocr.models.document_models import (
-    InvoiceData,
-    DeliveryNoteData,
-    ReceptionNoteData,
-    PurchaseOrderData
-)
+import requests
+from dotenv import load_dotenv
 
 class CustomVisionTool(BaseTool):
     name: str = "Custom Vision Tool"
@@ -52,42 +48,38 @@ class CustomVisionTool(BaseTool):
         except Exception as e:
             return f"Error processing image: {str(e)}"
 
+class AirtableWriterTool(BaseTool):
+    name: str = "Airtable Writer Tool"
+    description: str = "A tool that writes invoice data to Airtable"
+    api_token: str = Field(default_factory=lambda: os.getenv('AIRTABLE_TOKEN'))
+    base_id: str = Field(default_factory=lambda: os.getenv('AIRTABLE_BASE_ID'))
+    table_id: str = Field(default_factory=lambda: os.getenv('AIRTABLE_TABLE_ID'))
+    headers: dict = Field(default_factory=lambda: {
+        'Authorization': f'Bearer {os.getenv("AIRTABLE_TOKEN")}',
+        'Content-Type': 'application/json'
+    })
 
-class DocumentModelSelector(BaseTool):
-    name: str = "Document Model Selector"
-    description: str = "A tool that selects the appropriate Pydantic model based on document classification"
+    def _run(self, data: Dict) -> str:
+        """Write data to Airtable"""
+        try:
+            # The data should be passed directly, not wrapped in another dict
+            airtable_data = {
+                "records": [{
+                    "fields": {
+                        "invoice_number": data["invoice_number"],
+                        "invoice_date": data["invoice_date"],
+                        "invoice_total": data["invoice_total"]  # Convert to float for Airtable
+                    }
+                }]
+            }
 
-    # Define mapping of document types to their corresponding models
-    MODEL_MAPPING: Dict[str, Type[BaseModel]] = {
-        "invoice": InvoiceData,
-        "delivery_note": DeliveryNoteData,
-        "reception_note": ReceptionNoteData,
-        "purchase_order": PurchaseOrderData
-    }
+            url = f'https://api.airtable.com/v0/{self.base_id}/{self.table_id}'
+            response = requests.post(url, headers=self.headers, json=airtable_data)
 
-    def _run(self, document_type: str) -> Type[BaseModel]:
-        """
-        Returns the appropriate Pydantic model based on the document classification.
-        
-        Args:
-            document_type (str): The type of document (e.g., 'invoice', 'delivery_note')
-            
-        Returns:
-            Type[BaseModel]: The corresponding Pydantic model class
-            
-        Raises:
-            ValueError: If the document type is not recognized
-        """
-        # Normalize the input string
-        normalized_type = document_type.lower().replace(" ", "_")
-        
-        # Get the corresponding model
-        model = self.MODEL_MAPPING.get(normalized_type)
-        
-        if model is None:
-            raise ValueError(
-                f"Unknown document type: {document_type}. "
-                f"Supported types are: {', '.join(self.MODEL_MAPPING.keys())}"
-            )
-            
-        return model
+            if response.status_code == 200:
+                return f"Successfully wrote data to Airtable: {response.json()}"
+            else:
+                return f"Error writing to Airtable: {response.text}"
+
+        except Exception as e:
+            return f"Error in AirtableWriterTool: {str(e)}"

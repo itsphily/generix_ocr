@@ -1,20 +1,11 @@
+```
 amazon.fr
-
 Facture
 
 AIRVAT EURL
-10 RUE DE PENTHIÈVRE
+10 RUE DE PENTHIEVRE
 PARIS, 75008
 FR
-
-Payé
-Référence de paiement FR19BJR463CM43S
-Vendu par Amazon EU S.a r.l., Succursale Française
-TVA FR12487773327
-
-Date de la facture/Date de la livraison 18 décembre 2022
-Numéro de la facture FR549MRP3QLCX
-Total à payer 459,98 €
 
 Veuillez contacter le Service Client en visitant le lien suivant: www.amazon.fr/contact-us
 
@@ -27,7 +18,7 @@ FR
 Adresse de livraison
 Pascal Descamps
 15, Rue de Dijon
-Daix, 21121
+Dax, 21121
 FR
 
 Vendu par
@@ -38,15 +29,17 @@ France
 TVA FR12487773327
 
 Informations de la commande
-Date de la commande 18 décembre 2022
-Numéro de la commande 132-1856509-6055157
+Date de la commande
+18 décembre 2022
+Numéro de la commande
+132-1856509-6055157
 
 Détails de la facture
-
 Description
 Samsung Galaxy Buds Pro Violet SM-R190NZVAEUE
+ASIN: B08VNQ5QP
 
-Quantité 
+Qté
 2
 
 Prix Unitaire HT
@@ -55,18 +48,19 @@ Prix Unitaire HT
 Taux TVA
 20 %
 
-Prix Unitaire TTC 
+Prix Unitaire TTC
 229,99 €
 
-Total TTC 
+Total TTC
 459,98 €
 
-ASIN: B08VNQSQ5P
-Livraison 0,00 € 0,00 € 0,00 €
+Livraison
+0,00 €
 
-Facture Total 459,98 €
+Facture Total
+459,98 €
 
-Taux TVA 
+Taux TVA
 20 %
 
 Total HT
@@ -78,11 +72,22 @@ TVA
 Total
 76,66 €
 
-Nos prix des équipements électriques et électroniques incluent l'éco-participation, conformément à l'article L. 541-10-2 du code de l'environnement.
-LU-BIO-04
-Amazon EU S.à r.l. - 38 avenue John F. Kennedy, L-1855 Luxembourg
-R.C.S. Luxembourg B 101818 - Capital Social: 37.500 EUR - N° de licence: 104408 - N° de TVA intracommunautaire: LU20260743
+Nos prix des équipements électriques et électroniques incluent l’éco-participation, conformément à l’article L. 541-10-2 du code de l’environnement. LU-BIO-04
+Amazon EU S.a r.l. - 38 avenue John F. Kennedy, L-1855 Luxembourg
+R.C.S. Luxembourg: B 101818 - Capital Social: 30,500 EUR - N° de licence: 104408 - N° de TVA intracommunautaire: LU20260743
 Amazon EU S.a r.l., Succursale Française - 67 Boulevard du Général Leclerc, 92110 Clichy, France
-SIREN: 487773327 - RCS Nanterre - APE: 4791B - TVA: FR 12487773327
-
+SIREN: 487773327 - RCS Nanterre - APE: 4791b - TVA : FR 12487773327
 Page 1 de 1
+
+Payé
+Référence de paiement  FR19BJR463CM43S
+Vendu par Amazon EU S.a r.l., Succursale Française
+TVA FR12487773327
+
+Date de la facture/Date de la livraison
+18 décembre 2022
+Numéro de la facture
+FR549MRP3QLCX
+Total à payer
+459,98 €
+```
