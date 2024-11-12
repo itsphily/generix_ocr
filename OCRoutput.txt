@@ -1,21 +1,22 @@
 ```
 amazon.fr
+
 Facture
+
 AIRVAT EURL
 10 RUE DE PENTHIÈVRE
 PARIS, 75008
 FR
 
+Veuillez contacter le Service Client en visitant le lien suivant: www.amazon.fr/contact-us
+
 Payé
-Référence de paiement  FR19BJR463CM43S
+Référence de paiement FR19BJR463CM43S
 Vendu par Amazon EU S.a r.l., Succursale Française
 TVA FR12487773327
-
-Date de la facture/Date de la livraison        18 décembre 2022
-Numéro de la facture  FR549MRP3QLCX
-Total à payer                   459,98 €
-
-Veuillez contacter le Service Client en visitant le lien suivant: www.amazon.fr/contact-us
+Date de la facture/Date de la livraison 18 décembre 2022
+Numéro de la facture FR54MPR3QLCX
+Total à payer 459,98 €
 
 Adresse de facturation
 Airvat EURL
@@ -37,47 +38,31 @@ France
 TVA FR12487773327
 
 Informations de la commande
-Date de la commande      Numéro de la commande
-18 décembre 2022             132-1856509-6055157
+Date de la commande 18 décembre 2022
+Numéro de la commande 132-1856509-6055157
 
 Détails de la facture
-Description
-Samsung Galaxy Buds Pro Violet SM-R190NZVAEUE
+
+Description Qté Prix Unitaire HT Taux TVA Prix Unitaire TTC Total TTC
+
+Samsung Galaxy Buds Pro Violet SM-R190NZVAEUE 2 191,66 € 20 % 229,99 € 459,98 €
+
 ASIN: B08VNQSQ5P
-Livraison
+Livraison 0,00 € 0,00 € 0,00 €
 
-Qté
-2
+Facture Total 459,98 €
 
-Prix Unitaire HT
-191,66 €
+Taux TVA Total HT TVA
+20 % 383,32 € 76,66 €
 
-Taux TVA
-20 %
+Total 76,66 €
 
-Prix Unitaire TTC
-229,99 €
-
-Total TTC
-459,98 €
-
-0,00 €
-0,00 €  0,00 €
-
-Facture Total
-459,98 €
-
-Taux TVA         Total HT         TVA 
-20 %                 383,32 €         76,66 €
-Total                                            76,66 €
-
-Nos prix des équipements électriques et électroniques incluent l'éco-participation, conformément à l'article L. 541-10-2 du code de l'environnement.
-LU-BIO-04
-
-Amazon EU S.a r.l. - 38 avenue John F. Kennedy, L-1855 Luxembourg
-R.C.S. Luxembourg: B 101818 - Capital Social: 37.500 EUR - N° de licence: 100464 - N° de TVA intracommunautaire: LU20260743
-Amazon EU S.a r.l., Succursale Française - 67 Boulevard du Général Leclerc, 92110 Clichy, France
-SIREN: 4877773327 - RCS Nanterre - APE: 4791B - TVA : FR 12487773327
+Nos prix des équipements électriques et électroniques incluent l'éco-participation, conformément à l’article L. 541-10-2 du code de l’environnement.
+LU-B10-04
+Amazon EU S.à r.l. - 38 avenue John F. Kennedy, L-1855 Luxembourg
+R.C.S. Luxembourg: B 101818 - Capital Social: 37,500 EUR - N° de licence: 104408 - N° de TVA intracommunautaire: LU20260743
+Amazon EU S.à r.l., Succursale Française - 67 Boulevard du Général Leclerc, 92110 Clichy, France
+SIREN: 487773327 - RCS Nanterre - APE: 4791b - TVA: FR 12487773327
 
 Page 1 de 1
 ```

@@ -132,15 +132,19 @@ async def run():
     }
     print(f"Inputs: {inputs}")
 
-    # Initialize and run pipeline
+    # Initialize pipeline
     pipeline = GenerixOcrPipeline()
-    results = await pipeline.kickoff([inputs])  
-    
+    results = await pipeline.kickoff([inputs])
+
+
     for result in results:
         print(f"Raw output: {result.raw}")
         if result.json_dict:
             print(f"JSON output: {result.json_dict}")
+        if result.pydantic:
+            print(f"Pydantic output: {result.pydantic}")
         print("\n")
+    
 
 def main():
     asyncio.run(run())
