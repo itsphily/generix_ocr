@@ -1,5 +1,4 @@
-The properly formatted and structured data, ready for Airtable, is:
-
+The data has been successfully formatted and loaded into Airtable with the following content:
 ```json
 {
   "invoice_number": "FR549MRP3QLCX",

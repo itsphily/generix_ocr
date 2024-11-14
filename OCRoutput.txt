@@ -1,9 +1,9 @@
-```
 amazon.fr
+
 Facture
 
 AIRVAT EURL
-10 RUE DE PENTHIEVRE
+10 RUE DE PENTHIÈVRE
 PARIS, 75008
 FR
 
@@ -18,11 +18,11 @@ FR
 Adresse de livraison
 Pascal Descamps
 15, Rue de Dijon
-Dax, 21121
+Daix, 21121
 FR
 
 Vendu par
-Amazon EU S.a r.l., Succursale Française
+Amazon EU S.à r.l., Succursale Française
 67 Boulevard du General Leclerc
 Clichy 92110
 France
@@ -30,31 +30,38 @@ TVA FR12487773327
 
 Informations de la commande
 Date de la commande
-18 décembre 2022
 Numéro de la commande
+18 décembre 2022
 132-1856509-6055157
 
 Détails de la facture
+
 Description
 Samsung Galaxy Buds Pro Violet SM-R190NZVAEUE
-ASIN: B08VNQ5QP
+
+ASIN: B08VNQSQ5P
+
+Livraison
 
 Qté
 2
 
 Prix Unitaire HT
-191,66 €
+191.66 €
 
 Taux TVA
 20 %
 
 Prix Unitaire TTC
-229,99 €
+229.99 €
 
 Total TTC
 459,98 €
 
-Livraison
+0,00 €
+
+0,00 €
+
 0,00 €
 
 Facture Total
@@ -72,22 +79,19 @@ TVA
 Total
 76,66 €
 
-Nos prix des équipements électriques et électroniques incluent l’éco-participation, conformément à l’article L. 541-10-2 du code de l’environnement. LU-BIO-04
-Amazon EU S.a r.l. - 38 avenue John F. Kennedy, L-1855 Luxembourg
-R.C.S. Luxembourg: B 101818 - Capital Social: 30,500 EUR - N° de licence: 104408 - N° de TVA intracommunautaire: LU20260743
-Amazon EU S.a r.l., Succursale Française - 67 Boulevard du Général Leclerc, 92110 Clichy, France
-SIREN: 487773327 - RCS Nanterre - APE: 4791b - TVA : FR 12487773327
-Page 1 de 1
-
 Payé
 Référence de paiement  FR19BJR463CM43S
-Vendu par Amazon EU S.a r.l., Succursale Française
+Vendu par Amazon EU S.à r.l., Succursale Française
 TVA FR12487773327
+Date de la facture/Date de la livraison 18 décembre 2022
+Numéro de la facture  FR549MRP3QLCX
+Total à payer  459,98 €
 
-Date de la facture/Date de la livraison
-18 décembre 2022
-Numéro de la facture
-FR549MRP3QLCX
-Total à payer
-459,98 €
-```
+Nos prix des équipements électriques et électroniques incluent l'éco-participation, conformément à l'article L. 541-10-2 du code de l'environnement. 
+LU-BIO-04
+Amazon EU S.à r.l. - 38 avenue John F. Kennedy, L-1855 Luxembourg
+R.C.S. Luxembourg : B 101818 - Capital Social : 37,500 EUR - N° de licence: 104408 - N° de TVA intracommunautaire: LU20260743
+Amazon EU S.à r.l., Succursale Française - 67 Boulevard du Général Leclerc, 92110 Clichy, France
+SIREN : 487773327 - RCS Nanterre - APE : 4791B - TVA : FR 12487773327
+
+Page 1 de 1

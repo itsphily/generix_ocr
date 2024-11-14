@@ -22,7 +22,9 @@ document_classification_task:
 ocr_output_aggregation:
   agent: ocr_output_aggregator
   description: >
-    Using the text extraction outputs from {llama_ocr_output}, {minicpm_ocr_output}, and the output from the text extraction task, analyze and reconcile differences to consolidate the information. Produce a single, accurate extraction that retains key details from each model output.
+    Using the text extraction outputs from {llama_ocr_output}, {minicpm_ocr_output}, and the output from the text extraction task, analyze and reconcile differences to consolidate the information. 
+    You can assume the output from the text extraction task is the most accurate.
+    Produce a single, accurate extraction that retains key details from each model output.
   expected_output: >
     The final, aggregated text extraction, reflecting the most accurate information across all three model outputs.
 
